@@ -21,13 +21,13 @@
 # Can you write the program so that it will run for any number of monkeys?
 
 MONKEYS = {
-  1 => "One", 2 => "Two", 3 => "Three", 4 => "Four", 5 => "Five",
-  6 => "Six", 7 => "Seven", 8 => "Eight", 9 => "Nine", 10 => "Ten"
+  1  => "One", 2 => "Two", 3 => "Three", 4 => "Four", 5 => "Five",
+  6  => "Six", 7 => "Seven", 8 => "Eight", 9 => "Nine", 10 => "Ten",
 }
 
 def little_monkeys(num_of_monkeys)
   (1..num_of_monkeys).to_a.reverse.each do |num|
-    if num == 1
+    if MONKEYS[num] == "One"
       puts "One little monkey jumping on the bed,"
       puts "He fell off and bumped his head,"
       puts "Mama called the doctor and the doctor said,"
@@ -43,3 +43,4 @@ def little_monkeys(num_of_monkeys)
 end
 
 little_monkeys(10)
+little_monkeys(13)
