@@ -8,6 +8,15 @@ MONKEYS = {
   50 => "Fifty", 60 => "Sixty", 70 => "Seventy", 80 => "Eighty", 90 => "Ninety"
 }
 
+def bumped_head_doc(number)
+  puts "#{number} little monkeys jumping on the bed,"
+  puts "One fell off and bumped his head,"
+end
+
+def mama_doc
+  puts "Mama called the doctor and the doctor said,\n'No more monkeys jumping on the bed!'"
+end
+
 def little_monkeys(num_of_monkeys)
   (1..num_of_monkeys).to_a.reverse.each do |num|
     if num == 1
@@ -19,19 +28,15 @@ def little_monkeys(num_of_monkeys)
       tens_place = MONKEYS[(((num / 10).floor) * 10)]
       ones_place = MONKEYS[(num % 10)]
       num_string = tens_place + "-" + ones_place.downcase
-      puts "#{num_string} little monkeys jumping on the bed,"
-      puts "One fell off and bumped his head,"
-      puts "Mama called the doctor and the doctor said,"
-      puts "No more monkeys jumping on the bed!"
+      bumped_head_doc(num_string)
+      mama_doc
       puts " "
     elsif num > 99
       puts "Alright, that's enough monkeys..."
       puts " "
     else
-      puts "#{MONKEYS[num]} little monkeys jumping on the bed,"
-      puts "One fell off and bumped his head,"
-      puts "Mama called the doctor and the doctor said,"
-      puts "No more monkeys jumping on the bed!"
+      bumped_head_doc(MONKEYS[num])
+      mama_doc
       puts " "
     end
   end
