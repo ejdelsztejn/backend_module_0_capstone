@@ -1,6 +1,6 @@
-people = 30
+people = 300
 cars = 40
-trucks = 15
+trucks = 40
 
 if cars > people
   puts "We should take the cars."
@@ -18,8 +18,8 @@ else
   puts "We still can't decide."
 end
 
-if people > trucks
+if people > trucks && people < cars
   puts "Alright, let's just take the trucks."
-else
+else people > trucks && people > cars
   puts "Fine, let's stay home then."
 end
