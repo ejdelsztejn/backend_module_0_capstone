@@ -38,3 +38,17 @@ p "chunky" == "bacon" && (!(3 == 4 || 3 == 3))
 # false
 p 3 == 3 && (!("testing" == "testing" || "Ruby" == "Fun"))
 # false
+# -----------------------------------------------------------------------------
+# There are a lot of operators in Ruby similar to != and ==. Try to find as many
+# "equality operators" as you can. They should be like < or <=.
+# Write out the names of each of these equality operators. For example, I call
+# != "not equal."
+
+# >=      - Greater than or equal to
+# <=      - Less than or equal to
+# >       - Greater than
+# <       - Less than
+# <=>     - Combined comparison operator (spaceship operator)
+# ===     - Test equality
+# .eql?   - True if two values are equal and of the same type
+# equal?  - True if two things are the same object
