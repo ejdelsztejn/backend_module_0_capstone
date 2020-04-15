@@ -27,7 +27,7 @@ class CeasarCipher
 end
 
 cipher = CeasarCipher.new
-p cipher.encode("Hello World", 5)
+p cipher.encode("Hello World", 5)     # => "CZGGJ RJMGY"
 p cipher.encode("Say whaaaat???", 10) # => "IQO MXQQQQJ???"
 p cipher.encode("h*e*y t*h*e*r*e", 1) # => "G*D*X S*G*D*Q*D"
 p cipher.encode("BOO", 0)             # => "BOO"
